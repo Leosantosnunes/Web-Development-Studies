@@ -1,3 +1,7 @@
+// <!-- Students Name: Leonardo dos Santos Nunes
+// StudentID: 301263098
+// date: 06/09/2023 -->
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,6 +11,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var projectsRouter = require('./routes/project');
+var contactRouter = require('./routes/contact');
 
 var app = express();
 
@@ -24,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/projects', projectsRouter);
+app.use('/contact', contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
