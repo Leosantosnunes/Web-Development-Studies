@@ -1,14 +1,14 @@
 body{   
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     background-image: url(../images/header2.jpg);
-    background-size: 980px;
+    background-size: 1200px;
       
 }
 #mainBody{    
-    background-color: #ebebebe5;
+    background-color: #ebebebeb;
     top: 50%;
     left: 50%;
-    max-width: 980px;
+    max-width: 730px;
     width: 100%;    
     transform: translate(-50%, -50%);
     position: fixed;  
@@ -19,11 +19,31 @@ main{
 .logo{
     width: 40px;
 }
-
 #leo{
     max-width: 300px;
-    position:absolute;
+    border: 10px solid;
+    border-color: #cf8b2a;
+    border-radius: 10px;
 }
-#aboutmetext{
-    position:relative
+.aboutme p{
+    padding: 10px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.projects img{
+    max-width: 250px;
+    max-height: 285px;
+}
+.projects .col{    
+    padding-bottom: 50px;
+}
+
+.services img{
+    max-width: 180px;
+    max-height: 285px;
+}
+
+.services p{    
+    padding: 10px;
 }
