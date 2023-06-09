@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS SECTION -->
-  <link rel="stylesheet" href='/stylesheets/style.css'>
-  <link rel="stylesheet" href='/bootstrap/dist/css/bootstrap.min.css'>
-  <link rel="stylesheet" href='@fortawesome/fontawesome-free/css/all.min.css'>
-  <!-- SCRIPT SECTION -->
-  <script src='/jquery/dist/jquery.min.js'></script>
-  <script src='/bootstrap/dist/js/bootstrap.min.js'></script>
-  <title>Assignment 1</title>
-</head>
-<body>
-  <nav class="nav">
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
-  </nav>
-</body>
-</html>
+<%- include('partials/header.ejs'); %> 
+
+<%- include('partials/topnav.ejs'); %> 
+
+  <main>
+    <h1>WELCOME TO MY PORTFOLIO</h1>
+    <br><br><br><br><br><br><br><br><br>
+    <h3>Mission Statement:</h3>
+    <p>"As a programming developer, my mission is to leverage technology to drive positive change by prioritizing the environment, ethics, honesty, and justice. I am committed to creating sustainable solutions that minimize our ecological impact, upholding ethical principles to ensure inclusivity and respect, fostering transparency and trust through honest practices, and working towards a more just and equitable society. Through my work, I aim to leave a lasting impact that advances these values and contributes to the betterment of our world."</p>
+  </main>
+  
+  <%- include('partials/footernav.ejs'); %>
+
+  <%- include('partials/footer.ejs'); %>
