@@ -44,6 +44,18 @@ main{
     padding-bottom: 50px;
 }
 
+.phoneProjects .col{
+    display: none;
+}
+
+@media (max-width: 770px) {.phoneProjects .col{    
+    display: block;    
+}}
+
+@media (max-width: 770px) {.screenProjects .col{   
+    display: none;
+}}
+
 .services img{
     max-width: 150px;
     max-height: 285px;
@@ -51,4 +63,24 @@ main{
 
 .services p{    
     padding: 10px;
+    text-align: left;
 }
+
+.screenServices .col{
+    min-width: 200px;
+}
+
+.phoneServices .col{
+    display: none;
+}
+
+@media (max-width: 770px) {.phoneServices .col{    
+    min-width: 250px;
+    display: block;
+    flex-direction: column;
+}}
+
+@media (max-width: 770px) {.screenServices .col{
+    width: 200px;
+    display: none;
+}}
