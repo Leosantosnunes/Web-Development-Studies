@@ -7,6 +7,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
     background-image: url(../images/header2.jpg);
     background-size: 1200px;   
+    background-repeat: repeat;
     display: flex;
     justify-content: center; 
 
@@ -21,8 +22,16 @@ body{
 main{      
     padding: 15px;
 }
+.welcome{
+    background-color: #cf8b2a;
+    font-weight:600;
+}
 .logo{
     width: 40px;
+}
+
+.animation{
+    max-width: 680px;
 }
 #leo{
     max-width: 300px;
