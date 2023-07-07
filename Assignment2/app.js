@@ -15,6 +15,18 @@ var contactRouter = require('./routes/contact');
 
 var app = express();
 
+//Database Setup
+let mongoose = require('mongoose');
+let DB = require('./config/db')
+
+mongoose.connect(DB.URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', () => {
+  console.log('Node.JS is successfully connected to MongoDB.')
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

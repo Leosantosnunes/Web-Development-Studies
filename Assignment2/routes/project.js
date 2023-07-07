@@ -21,4 +21,9 @@ router.get('/projectfour', function(req, res, next) {
   res.render('projects/projectfour'); 
 });
 
+/* GET new project form page. */
+router.get('/newProject', function(req, res, next) {
+  res.render('projects/newProject'); 
+});
+
 module.exports = router;
