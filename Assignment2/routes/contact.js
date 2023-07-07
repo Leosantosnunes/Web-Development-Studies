@@ -14,14 +14,8 @@ router.post('/', (req, res, next) => {
                   "message":req.body.newmessage });  
 
   //insert data into the mongoDB
-  Contact.create(newContact, (err, Contact) => {
-    if(err){
-        console.log(err);
-        res.end(err);
-    }else{
-        res.redirect('/')
-    }
-});
+  Contact.create(newContact);
+  res.redirect('/');
 });
 
 module.exports = router;
