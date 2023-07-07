@@ -1,5 +1,10 @@
 var express = require('express');
 var router = express.Router();
+let mongoose = require('mongoose');
+
+//connect to model
+let Project = require('../models/project');
+const project = require('../models/project');
 
 /* GET projectone original size page. */
 router.get('/projectone', function(req, res, next) {

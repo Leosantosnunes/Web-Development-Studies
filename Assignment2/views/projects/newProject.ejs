@@ -8,6 +8,22 @@ date: 06/09/2023 -->
 
 <main>
     <h1>new Project</h1>
+    <form class="form" method="POST">
+        <div class="form-group">
+            <label for="pcompany">Project Title:</label>
+            <input type="text" class="form-control" id="ptitle" name="ptitle">
+        </div>
+        <div class="form-group">
+            <label for="price">Project Description:</label>
+            <textarea class="form-control"name="pdescription" id="pdescriotion" cols="30" rows="10"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pname">Project Deadline</label>
+            <input type="date" class="form-control" id="pname" name="pname">
+          </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 </main>
 
 <%- include('../partials/footernav.ejs'); %>
