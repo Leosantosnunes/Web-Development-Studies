@@ -8,7 +8,7 @@ let projectModel = mongoose.Schema(
         "pdeadline" : Date        
     },
     {
-        collection: "project"
+        collection: "OngoingProjects"
     }
 );
 

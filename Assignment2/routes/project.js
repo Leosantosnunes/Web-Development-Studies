@@ -31,4 +31,15 @@ router.get('/newProject', function(req, res, next) {
   res.render('projects/newProject'); 
 });
 
+router.post('/newProject', (req, res, next) => { 
+  //getting data from form 
+  let newProject = Project({"ptitle":req.body.ptitle, 
+                  "pdescription":req.body.pdescription, 
+                  "pdeadline": req.body.pdeadline});  
+
+  //insert data into the mongoDB
+  Project.create(newProject);
+  res.redirect('/');
+});
+
 module.exports = router;

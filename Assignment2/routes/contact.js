@@ -9,9 +9,9 @@ const contact = require('../models/contact');
 /* POST Customer information. */
 router.post('/', (req, res, next) => { 
   //getting data from form 
-  let newContact = Contact({ "name":req.body.pname , 
+  let newContact = Contact({"name":req.body.pname , 
                   "email":req.body.email, 
-                  "message":req.body.newmessage });  
+                  "message":req.body.newmessage});  
 
   //insert data into the mongoDB
   Contact.create(newContact);
