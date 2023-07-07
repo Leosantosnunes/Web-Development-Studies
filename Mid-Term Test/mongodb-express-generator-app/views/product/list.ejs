@@ -1,0 +1,49 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/top_nav.ejs %>
+ 
+<main class="container">
+    <br>
+    <a href="/products/add" class="btn btn-primary"><i class="fa-solid fa-plus fa-lg"></i> Add Product</a>
+    <br>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Company</th>
+              <th scope="col">Price</th>
+<<<<<<< HEAD
+              <th scope="col">   Edit / Delete</th>
+=======
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+>>>>>>> 8f7f056d24598f013ed866b58d7cd1f9f8b565e5
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let index = 0; index < ProductList.length; index++) { %>
+                <tr>
+                    <td><%= ProductList[index].name %></td>
+                    <td><%= ProductList[index].company %></td>
+                    <td><%= ProductList[index].price %></td>
+                    <td>
+<<<<<<< HEAD
+                      <a href="/products/edit/<%= ProductList[index].id %>" class="btn btn-info btn-sm"><i class="fa-solid fa-file-pen fa-lg"></i> Edit</a>                     
+                      <a class="btn btn-warning btn-sm" href="/products/delete/<%= ProductList[index].id %>"><i class="fa-solid fa-trash"></i> Delete</a>
+                    </td>               
+=======
+                      <a href="/products/edit/<%= ProductList[index].id %>" class="btn btn-info btn-sm"> <i class="fa-solid fa-file-pen fa-lg"></i> Edit</a>
+                    </td>
+                    <td>
+                      <a href="/products/delete/<%= ProductList[index].id %>" class="btn btn-danger btn-sm"> <i class="fa-sharp fa-light fa-trash fa-lg"></i> Delete </a>
+                    </td>
+>>>>>>> 8f7f056d24598f013ed866b58d7cd1f9f8b565e5
+                </tr>
+            <% } %>
+          </tbody>
+    </table>
+</main>
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
