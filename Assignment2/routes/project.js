@@ -52,5 +52,30 @@ router.get("/delete/:id",async (req,res,next) => {
   res.redirect('/projects')  
 });
 
+//Retrieve data from MongoDB and Open it in view (FORM)
+router.get('/edit/:id', async (req,res,next) => {
+  let id = req.params.id;
+
+  let projectData = await Project.findById(id);      
+  //Write code to display data in view
+  res.render('projects/editProject', {project: projectData})
+      
+  });
+
+//write code to store updated data into mongoDB
+router.post("/edit/:id",async (req,res,next) => {
+  let id = req.params.id;
+  let updatedProject = Project({
+      "_id": id,
+      "ptitle": req.body.ptitle,
+      "pdescription": req.body.pdescription,
+      "pdeadline": req.body.pdeadline
+  });
+
+  await Project.updateOne({_id: id}, updatedProject)     
+  res.redirect('/projects')
+  
+});
+
 
 module.exports = router;
