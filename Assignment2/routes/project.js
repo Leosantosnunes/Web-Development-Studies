@@ -42,4 +42,15 @@ router.post('/newProject', (req, res, next) => {
   res.redirect('/');
 });
 
+//Delete Code in the view and MongoDB
+router.get("/delete/:id",async (req,res,next) => {
+  let id = req.params.id;
+  console.log(id);
+
+  ProjDeleted = await Project.deleteOne({_id: id})
+  //console.log(await Project.findById({_id: id}));
+  res.redirect('/projects')  
+});
+
+
 module.exports = router;

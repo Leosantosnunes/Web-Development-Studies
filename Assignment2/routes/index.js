@@ -17,10 +17,8 @@ router.get('/about', function(req, res, next) {
 
 /* GET contact page. */
 router.get('/projects', async function(req, res, next) {
-  let projectList = await Project.find()  
-  console.log(projectList);
-  res.render('project', {ProjectList: projectList}) 
-  
+  let projectList = await Project.find();  
+  res.render('project', {ProjectList: projectList});  
 });
 
 /* GET project page. */
