@@ -1,15 +1,22 @@
 let mongoose = require('mongoose');
 
 //Create Model of Project
-let projectModel = mongoose.Schema(
+const projectModel = mongoose.Schema(
     {
-        "ptitle" : String,
-        "pdescription" : String,
-        "pdeadline" : Date        
+      ptitle: String,
+      pdescription: String,
+      pdeadline: {
+        type: Date,
+        get: function (value) {
+          // Formatting the date as YYYY-MM-DD
+          return value.toISOString().split('T')[0];
+        }
+      }
     },
     {
-        collection: "OngoingProjects"
+      collection: 'OngoingProjects'
     }
-);
+  );
+  
 
 module.exports = mongoose.model('Project', projectModel);
